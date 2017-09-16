@@ -51,10 +51,11 @@ public class DemoDijkstra {
             System.out.print("Enter # "+CurrentNode.getName()+"'s neighbors: ");
             int nei_num=Input.nextInt();
             /*if(nei_num<=DemoDijkstra.size());*/
+            
             int count =0 ;
             while(nei_num>count
                     &&CurrentNode.getNeighborMap().size()!=nei_num){//checkes if the #the current node's neighbors = the entered #                 
-                System.out.print("Meighbor's name: ");
+                System.out.print("Neighbor's name: ");
                //ptint curret node's neighbors and thier cost
                String neighbor=Input.next();
                 //check if this neighbor is a node in the topology
@@ -73,7 +74,6 @@ public class DemoDijkstra {
                 //System.out.println(CurrentNode.printNeighbors()+""+CurrentNode.getName());
             } 
         }
-         
         System.out.println("Enter the name of the SOURCE Node");
         Scanner InputSrc =new Scanner(System.in);
         String SRC=InputSrc.next();
