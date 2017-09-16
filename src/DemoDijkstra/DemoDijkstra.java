@@ -74,22 +74,27 @@ public class DemoDijkstra {
                 //System.out.println(CurrentNode.printNeighbors()+""+CurrentNode.getName());
             } 
         }
+        Node SRC , DST;
         System.out.println("Enter the name of the SOURCE Node");
         Scanner InputSrc =new Scanner(System.in);
-        String SRC=InputSrc.next();
-        if(NodeMap.containsKey(SRC));
+        String SRCname=InputSrc.next();
+        while(!NodeMap.containsKey(SRCname)){
+            System.out.println("Source Node doesn'y exist!\n Enter a valid node, Please!");
+        }
+        SRC=NodeMap.get(SRCname);
         //check if the SRC node is in the list if yes take it ,, no :error
+        
         System.out.println("Enter the name of the DISTENATION Node");
         Scanner InputDst =new Scanner(System.in);
-        String DST=InputDst.next();
-        if (DST.equals(SRC)){
-                System.out.println("Cost from node"+SRC+" to itself = 0");
-                System.exit(2);
+        String DSTname=InputDst.next();
+        if (DSTname.equals(SRCname)){
+                System.out.println("Cost from node"+SRCname+" to itself = 0");
+                System.exit(0);
             }
-        if(!NodeMap.containsKey(DST)){
-            System.out.println("distenation Node doesn'y exist");
-            System.exit(0);
+        while(!NodeMap.containsKey(DSTname)){
+            System.out.println("distenation Node doesn'y exist! \n Enter a valid node, Please!");
         }
+        DST=NodeMap.get(DSTname);
         /*Object flag = null;
         HashMap<Node, Node> PreviousNode = new HashMap();//to store the previous node to arrive to the node
         HashMap<Node, Integer> FakeList = new HashMap();// to store the node and the last cost to arrive to it
