@@ -95,7 +95,7 @@ public class DemoDijkstra {
             System.out.println("distenation Node doesn'y exist! \n Enter a valid node, Please!");
         }
         DST=NodeMap.get(DSTname);
-        /*Object flag = null;
+        Object flag = null;
         HashMap<Node, Node> PreviousNode = new HashMap();//to store the previous node to arrive to the node
         HashMap<Node, Integer> FakeList = new HashMap();// to store the node and the last cost to arrive to it
         
@@ -105,10 +105,10 @@ public class DemoDijkstra {
          Node leastCostNode= new Node();
          leastCostNode=SRC;
          int leastCost = 0;//اقل وحدة بالسطر
-         Iterator<Node> iteratorTestDijkstra=TestDijkstra.iterator();//list of the topology
+         Iterator<Node> iteratorDemoDijkstra=DemoDijkstra.iterator();//list of the topology
         
-        while(iteratorTestDijkstra.hasNext()){//at the first evrey node have infinit cost
-            Node currentNode = iteratorTestDijkstra.next();
+        while(iteratorDemoDijkstra.hasNext()){//at the first evrey node have infinit cost
+            Node currentNode = iteratorDemoDijkstra.next();
             if(currentNode.getName()!=SRC.getName()){
                 FakeList.put(currentNode,99999);
             }
@@ -164,6 +164,6 @@ public class DemoDijkstra {
                 Node NodeKey=(Node) key;
                 System.out.print(NodeKey.getName()+"");    
         }
-        System.out.println();*/
+        System.out.println();
     }
 }
